@@ -768,7 +768,7 @@ namespace isocd_builder {
             // Pad image so as to fill a CD-R 74 or CD-R 80 disc if requested
             // This is done to maximize the performance of double speed reading on the CD32 drive
             if(options.PadSize != PadSizeType.None) {
-                paddingSectors = maxSectors - totalSectors;
+                paddingSectors = maxSectors - totalSectors - 150;
                 totalSectors = maxSectors;
 
                 foreach(var entry in fullEntries) {
