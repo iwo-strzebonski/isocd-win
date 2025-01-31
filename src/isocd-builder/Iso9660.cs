@@ -753,13 +753,17 @@ namespace isocd_builder {
                 case PadSizeType.Cdr74:
                     maxSectors = isocd_builder_constants.MAX_SECTORS_CDR74;
                     break;
+                case PadSizeType.Cdr80:
+                    maxSectors = isocd_builder_constants.MAX_SECTORS_CDR80;
+                    break;
                 default:
                     maxSectors = isocd_builder_constants.MAX_SECTORS_CDR80;
                     break;
+
             }
 
             // Check data will not exceed max sectors
-            if(totalSectors > maxSectors) {
+            if (totalSectors > maxSectors) {
                 throw new InvalidOperationException(isocd_builder_constants.ERROR_MESSAGE_ISO_IMAGE_TOO_BIG);
             }
 
@@ -767,14 +771,25 @@ namespace isocd_builder {
 
             // Pad image so as to fill a CD-R 74 or CD-R 80 disc if requested
             // This is done to maximize the performance of double speed reading on the CD32 drive
-            if(options.PadSize != PadSizeType.None) {
+            if (options.PadSize != PadSizeType.None && options.PadSize != PadSizeType.Min1)
+            {
                 paddingSectors = maxSectors - totalSectors - 150;
                 totalSectors = maxSectors;
+            }
+            else if (options.PadSize == PadSizeType.Min1)
+            {
+                paddingSectors = 4500 - 150;
+                totalSectors = maxSectors;
+            }
 
-                foreach(var entry in fullEntries) {
+            if (options.PadSize != PadSizeType.None)
+            {
+                foreach (var entry in fullEntries)
+                {
                     entry.StartingSector += paddingSectors;
                 }
             }
+
 
             var pathTableLittleEndian = GeneratePathTable(true);
             var pathTableBigEndian = GeneratePathTable(false);

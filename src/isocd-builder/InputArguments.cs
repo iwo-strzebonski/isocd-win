@@ -73,6 +73,7 @@ namespace isocd_builder {
             .ToDictionary(p => p.Key, p => p.Value);
 
             foreach(var item in _parsedArguments) {
+                int intValue;
                 var property = someObjectType.GetProperty(item.Key, BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance);
 
                 if(property == null && attributeDictionary.ContainsKey(item.Key.ToLower())) {
@@ -97,7 +98,7 @@ namespace isocd_builder {
                     if(string.IsNullOrWhiteSpace(item.Value)) {
                         throw new ArgumentException(isocd_builder_constants.ARG_EXCEPTION_ARGUMENT_MUST_SPECIFY_INTEGER_VALUE, $"{item.Key}");
                     }
-                    else if(int.TryParse(item.Value, out int intValue)) {
+                    else if(int.TryParse(item.Value, out intValue)) {
                         property.SetValue(someObject, intValue, null);
                     }
                     else {
