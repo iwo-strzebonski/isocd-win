@@ -2,11 +2,11 @@
 
 ISOCD-Win is a C#/.NET Windows replacement for the native Amiga ISOCD application written by [Carl Sassenrath](https://en.wikipedia.org/wiki/Carl_Sassenrath) and other developers at Commodore. It creates bootable ISO image files which are compatible with the Amiga CD32 and CDTV. It was written to avoid the need to run the original ISOCD application either on a real or emulated Amiga, thus greatly simplifying and speeding up the process for the creators of new CDs for Amiga computers and consoles.
 
-![isocd-win-screenshot](https://github.com/Stat-Mat/isocd-win/blob/master/isocd-win.jpg)
+![isocd-win-screenshot](https://github.com/fuseoppl/isocd-win/blob/master/isocd-win.jpg)
 
-![isocd-win-options-screenshot](https://github.com/Stat-Mat/isocd-win/blob/master/isocd-win-options.jpg)
+![isocd-win-options-screenshot](https://github.com/fuseoppl/isocd-win/blob/master/isocd-win-options.jpg)
 
-![isocd-con-screenshot](https://github.com/Stat-Mat/isocd-win/blob/master/isocd-con.jpg)
+![isocd-con-screenshot](https://github.com/fuseoppl/isocd-win/blob/master/isocd-con.jpg)
 
 ## Features
 
