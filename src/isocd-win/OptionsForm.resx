@@ -117,6 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="directReadCheckBox.Tag" xml:space="preserve">
+    <value>Enables direct reads for all file I/O. If you write your application to allocate slightly larger buffers, you can enable CDFS direct reading feature, which will cause CDFS to DMA the data directly from the disc to your buffers.</value>
+  </data>
+  <data name="fastSearchCheckBox.Tag" xml:space="preserve">
+    <value>ISO-9660 mandates that entries in a directory be sorted in ascending ASCII older. However, since it only allows upper-case file names, it doesn’t say how to sort filenames that contain lower-case. The Fast Directory Search option will stop searching a directory when it passes the point where the filename could be. However, for it to work, the directory must have been sorted.</value>
+  </data>
+  <data name="dirCacheTextBox.Tag" xml:space="preserve">
+    <value>CDFS allocates a cache in which it saves the contents of directories it has read. This boosts performance if certain directories are read frequently. The size of this cache is specified in CD sectors (2K each). The default size is 16 blocks.</value>
+  </data>
+  <data name="fileLockTextBox.Tag" xml:space="preserve">
+    <value>CDFS pre-allocates a pool of Filelock structures which will be consumed as applications procure locks on files. The size of the pool is specified as the number of Filelock structures to pre-allocate. This will reduce memory fragmentation and slightly decrease access time. The default value is 40.</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

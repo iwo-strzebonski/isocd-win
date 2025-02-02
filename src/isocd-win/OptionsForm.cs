@@ -17,6 +17,7 @@ namespace isocd_win {
             dataPreparerIdTextBox.MaxLength = 128 - isocd_builder_constants.ISOCDWIN_DATA_PREPARER_IDENTIFIER.Length;
 
             imagePaddingComboBox.DataSource = Enum.GetValues(typeof(PadSizeType));
+
         }
 
         void SettingsForm_Shown(object sender, EventArgs e) {
@@ -103,6 +104,46 @@ namespace isocd_win {
                     winUAEPathTextBox.Text = fdlg.FileName;
                 }
             }
+        }
+
+        private void textBox_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            // This event is raised when the F1 key is pressed or the
+            // Help cursor is clicked on any of the address fields.
+            // The Help text for the field is in the control's
+            // Tag property. It is retrieved and displayed in the label.
+
+            Control requestingControl = (Control)sender;
+            HelpTextBox.Text = (string)requestingControl.Tag;
+            hlpevent.Handled = true;
+        }
+
+        void A_Characters_check(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsUpper(e.KeyChar) && e.KeyChar != '_' && e.KeyChar != '!' && e.KeyChar != '"' && e.KeyChar != '%' && e.KeyChar != '&' && e.KeyChar != 39 && e.KeyChar != '(' && e.KeyChar != ')' && e.KeyChar != '*' && e.KeyChar != '+' && e.KeyChar != ',' && e.KeyChar != '-' && e.KeyChar != '.' && e.KeyChar != '/' && e.KeyChar != ':' && e.KeyChar != ';' && e.KeyChar != '<' && e.KeyChar != '=' && e.KeyChar != '>' && e.KeyChar != '?' && e.KeyChar != '\b' && ModifierKeys != Keys.Control)
+            {
+                e.Handled = true;
+            }
+
+            base.OnKeyPress(e);
+        }
+
+        void D_Characters_check(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsUpper(e.KeyChar) && e.KeyChar != '_' && e.KeyChar != '\b' && ModifierKeys != Keys.Control)
+            {
+                e.Handled = true;
+            }
+
+            base.OnKeyPress(e);
+        }
+
+        void Any_Characters_check(object sender, KeyPressEventArgs e)
+        {
+
+            e.Handled = true;
+
+            base.OnKeyPress(e);
         }
     }
 }

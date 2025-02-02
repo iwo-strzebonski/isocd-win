@@ -42,7 +42,7 @@ namespace isocd_win {
             InitializeComponent();
 
             var version = Assembly.GetExecutingAssembly().GetName().Version;
-            Text += $" v{version.Major}.{version.Minor}";
+            Text += $" v{version.Major}.{version.Minor}.{version.Build}";
 
             targetSystemComboBox.DataSource = Enum.GetValues(typeof(TargetSystemType));
 
@@ -360,6 +360,14 @@ namespace isocd_win {
         private void imgTextBox_TextChanged(object sender, EventArgs e)
         {
             configManager.Options.OutputFile = imgTextBox.Text;
+        }
+
+        void Any_Characters_check(object sender, KeyPressEventArgs e)
+        {
+
+            e.Handled = true;
+
+            base.OnKeyPress(e);
         }
     }
 }

@@ -50,17 +50,19 @@
             // 
             // srcTextBox
             // 
-            this.srcTextBox.Location = new System.Drawing.Point(89, 20);
+            this.srcTextBox.Location = new System.Drawing.Point(119, 25);
+            this.srcTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.srcTextBox.Name = "srcTextBox";
-            this.srcTextBox.Size = new System.Drawing.Size(355, 20);
+            this.srcTextBox.Size = new System.Drawing.Size(472, 22);
             this.srcTextBox.TabIndex = 2;
             this.srcTextBox.TextChanged += new System.EventHandler(this.srcTextBox_TextChanged);
             // 
             // startBuildButton
             // 
-            this.startBuildButton.Location = new System.Drawing.Point(214, 213);
+            this.startBuildButton.Location = new System.Drawing.Point(285, 262);
+            this.startBuildButton.Margin = new System.Windows.Forms.Padding(4);
             this.startBuildButton.Name = "startBuildButton";
-            this.startBuildButton.Size = new System.Drawing.Size(131, 22);
+            this.startBuildButton.Size = new System.Drawing.Size(175, 27);
             this.startBuildButton.TabIndex = 11;
             this.startBuildButton.Text = "Start Build";
             this.startBuildButton.UseVisualStyleBackColor = true;
@@ -69,43 +71,48 @@
             // inputFolderLabel
             // 
             this.inputFolderLabel.AutoSize = true;
-            this.inputFolderLabel.Location = new System.Drawing.Point(23, 23);
+            this.inputFolderLabel.Location = new System.Drawing.Point(31, 28);
+            this.inputFolderLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.inputFolderLabel.Name = "inputFolderLabel";
-            this.inputFolderLabel.Size = new System.Drawing.Size(63, 13);
+            this.inputFolderLabel.Size = new System.Drawing.Size(83, 17);
             this.inputFolderLabel.TabIndex = 1;
             this.inputFolderLabel.Text = "Input Folder";
             // 
             // imgTextBox
             // 
-            this.imgTextBox.Location = new System.Drawing.Point(89, 55);
+            this.imgTextBox.Location = new System.Drawing.Point(119, 68);
+            this.imgTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.imgTextBox.Name = "imgTextBox";
-            this.imgTextBox.Size = new System.Drawing.Size(355, 20);
+            this.imgTextBox.Size = new System.Drawing.Size(472, 22);
             this.imgTextBox.TabIndex = 5;
             this.imgTextBox.TextChanged += new System.EventHandler(this.imgTextBox_TextChanged);
             // 
             // outputFileLabel
             // 
             this.outputFileLabel.AutoSize = true;
-            this.outputFileLabel.Location = new System.Drawing.Point(28, 58);
+            this.outputFileLabel.Location = new System.Drawing.Point(37, 71);
+            this.outputFileLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.outputFileLabel.Name = "outputFileLabel";
-            this.outputFileLabel.Size = new System.Drawing.Size(58, 13);
+            this.outputFileLabel.Size = new System.Drawing.Size(77, 17);
             this.outputFileLabel.TabIndex = 4;
             this.outputFileLabel.Text = "Output File";
             // 
             // authorLabel
             // 
             this.authorLabel.AutoSize = true;
-            this.authorLabel.Location = new System.Drawing.Point(427, 358);
+            this.authorLabel.Location = new System.Drawing.Point(557, 441);
+            this.authorLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.authorLabel.Name = "authorLabel";
-            this.authorLabel.Size = new System.Drawing.Size(107, 13);
+            this.authorLabel.Size = new System.Drawing.Size(142, 17);
             this.authorLabel.TabIndex = 16;
             this.authorLabel.Text = "«Ben Squibb - 2020»";
             // 
             // srcBrowseButton
             // 
-            this.srcBrowseButton.Location = new System.Drawing.Point(450, 18);
+            this.srcBrowseButton.Location = new System.Drawing.Point(600, 22);
+            this.srcBrowseButton.Margin = new System.Windows.Forms.Padding(4);
             this.srcBrowseButton.Name = "srcBrowseButton";
-            this.srcBrowseButton.Size = new System.Drawing.Size(75, 23);
+            this.srcBrowseButton.Size = new System.Drawing.Size(100, 28);
             this.srcBrowseButton.TabIndex = 3;
             this.srcBrowseButton.Text = "Browse";
             this.srcBrowseButton.UseVisualStyleBackColor = true;
@@ -113,9 +120,10 @@
             // 
             // imgBrowseButton
             // 
-            this.imgBrowseButton.Location = new System.Drawing.Point(450, 53);
+            this.imgBrowseButton.Location = new System.Drawing.Point(600, 65);
+            this.imgBrowseButton.Margin = new System.Windows.Forms.Padding(4);
             this.imgBrowseButton.Name = "imgBrowseButton";
-            this.imgBrowseButton.Size = new System.Drawing.Size(75, 23);
+            this.imgBrowseButton.Size = new System.Drawing.Size(100, 28);
             this.imgBrowseButton.TabIndex = 6;
             this.imgBrowseButton.Text = "Browse";
             this.imgBrowseButton.UseVisualStyleBackColor = true;
@@ -123,20 +131,22 @@
             // 
             // statusLabel
             // 
-            this.statusLabel.BackColor = System.Drawing.SystemColors.Window;
+            this.statusLabel.BackColor = System.Drawing.SystemColors.Control;
             this.statusLabel.ForeColor = System.Drawing.Color.Blue;
-            this.statusLabel.Location = new System.Drawing.Point(14, 9);
-            this.statusLabel.MinimumSize = new System.Drawing.Size(330, 4);
+            this.statusLabel.Location = new System.Drawing.Point(-1, 11);
+            this.statusLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.statusLabel.MinimumSize = new System.Drawing.Size(440, 5);
             this.statusLabel.Name = "statusLabel";
-            this.statusLabel.Size = new System.Drawing.Size(472, 25);
+            this.statusLabel.Size = new System.Drawing.Size(658, 31);
             this.statusLabel.TabIndex = 14;
             this.statusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // optionsButton
             // 
-            this.optionsButton.Location = new System.Drawing.Point(19, 353);
+            this.optionsButton.Location = new System.Drawing.Point(41, 431);
+            this.optionsButton.Margin = new System.Windows.Forms.Padding(4);
             this.optionsButton.Name = "optionsButton";
-            this.optionsButton.Size = new System.Drawing.Size(75, 22);
+            this.optionsButton.Size = new System.Drawing.Size(100, 27);
             this.optionsButton.TabIndex = 15;
             this.optionsButton.Text = "Options";
             this.optionsButton.UseVisualStyleBackColor = true;
@@ -144,27 +154,32 @@
             // 
             // targetSystemPictureBox
             // 
-            this.targetSystemPictureBox.Location = new System.Drawing.Point(174, 28);
+            this.targetSystemPictureBox.Location = new System.Drawing.Point(232, 34);
+            this.targetSystemPictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.targetSystemPictureBox.Name = "targetSystemPictureBox";
-            this.targetSystemPictureBox.Size = new System.Drawing.Size(131, 54);
+            this.targetSystemPictureBox.Size = new System.Drawing.Size(175, 66);
             this.targetSystemPictureBox.TabIndex = 15;
             this.targetSystemPictureBox.TabStop = false;
             // 
             // targetSystemComboBox
             // 
             this.targetSystemComboBox.FormattingEnabled = true;
-            this.targetSystemComboBox.Location = new System.Drawing.Point(74, 61);
+            this.targetSystemComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.targetSystemComboBox.Location = new System.Drawing.Point(99, 75);
+            this.targetSystemComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.targetSystemComboBox.Name = "targetSystemComboBox";
-            this.targetSystemComboBox.Size = new System.Drawing.Size(77, 21);
+            this.targetSystemComboBox.Size = new System.Drawing.Size(101, 24);
             this.targetSystemComboBox.TabIndex = 10;
             this.targetSystemComboBox.SelectedIndexChanged += new System.EventHandler(this.targetSystemComboBox_SelectedIndexChanged);
+            this.targetSystemComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Any_Characters_check);
             // 
             // useTmFileCheckBox
             // 
             this.useTmFileCheckBox.AutoSize = true;
-            this.useTmFileCheckBox.Location = new System.Drawing.Point(74, 28);
+            this.useTmFileCheckBox.Location = new System.Drawing.Point(99, 34);
+            this.useTmFileCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.useTmFileCheckBox.Name = "useTmFileCheckBox";
-            this.useTmFileCheckBox.Size = new System.Drawing.Size(77, 17);
+            this.useTmFileCheckBox.Size = new System.Drawing.Size(99, 21);
             this.useTmFileCheckBox.TabIndex = 9;
             this.useTmFileCheckBox.Text = "Trademark";
             this.useTmFileCheckBox.UseVisualStyleBackColor = true;
@@ -176,37 +191,41 @@
             this.targetSystemGroupBox.Controls.Add(this.targetSystemPictureBox);
             this.targetSystemGroupBox.Controls.Add(this.useTmFileCheckBox);
             this.targetSystemGroupBox.Controls.Add(this.targetSystemComboBox);
-            this.targetSystemGroupBox.Location = new System.Drawing.Point(89, 94);
+            this.targetSystemGroupBox.Location = new System.Drawing.Point(119, 116);
+            this.targetSystemGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.targetSystemGroupBox.Name = "targetSystemGroupBox";
-            this.targetSystemGroupBox.Size = new System.Drawing.Size(355, 100);
+            this.targetSystemGroupBox.Size = new System.Drawing.Size(473, 123);
             this.targetSystemGroupBox.TabIndex = 8;
             // 
             // targetSystemSettingsLabel
             // 
             this.targetSystemSettingsLabel.AutoSize = true;
-            this.targetSystemSettingsLabel.Location = new System.Drawing.Point(202, 88);
+            this.targetSystemSettingsLabel.Location = new System.Drawing.Point(269, 108);
+            this.targetSystemSettingsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.targetSystemSettingsLabel.Name = "targetSystemSettingsLabel";
-            this.targetSystemSettingsLabel.Size = new System.Drawing.Size(128, 13);
+            this.targetSystemSettingsLabel.Size = new System.Drawing.Size(155, 17);
             this.targetSystemSettingsLabel.TabIndex = 7;
-            this.targetSystemSettingsLabel.Text = "[ Target System Settings ]";
+            this.targetSystemSettingsLabel.Text = "Target System Settings";
             // 
             // buildStatusGroupBox
             // 
             this.buildStatusGroupBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.buildStatusGroupBox.Controls.Add(this.statusLabel);
-            this.buildStatusGroupBox.Location = new System.Drawing.Point(31, 298);
+            this.buildStatusGroupBox.Location = new System.Drawing.Point(41, 367);
+            this.buildStatusGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.buildStatusGroupBox.Name = "buildStatusGroupBox";
-            this.buildStatusGroupBox.Size = new System.Drawing.Size(494, 43);
+            this.buildStatusGroupBox.Size = new System.Drawing.Size(658, 52);
             this.buildStatusGroupBox.TabIndex = 13;
             // 
             // buildStatusLabel
             // 
             this.buildStatusLabel.AutoSize = true;
-            this.buildStatusLabel.Location = new System.Drawing.Point(242, 291);
+            this.buildStatusLabel.Location = new System.Drawing.Point(323, 358);
+            this.buildStatusLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.buildStatusLabel.Name = "buildStatusLabel";
-            this.buildStatusLabel.Size = new System.Drawing.Size(75, 13);
+            this.buildStatusLabel.Size = new System.Drawing.Size(83, 17);
             this.buildStatusLabel.TabIndex = 12;
-            this.buildStatusLabel.Text = "[ Build Status ]";
+            this.buildStatusLabel.Text = "Build Status";
             // 
             // progressBar
             // 
@@ -215,18 +234,19 @@
             this.progressBar.Cursor = System.Windows.Forms.Cursors.Default;
             this.progressBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.progressBar.ForeColor = System.Drawing.Color.LightGreen;
-            this.progressBar.Location = new System.Drawing.Point(64, 244);
+            this.progressBar.Location = new System.Drawing.Point(41, 311);
+            this.progressBar.Margin = new System.Windows.Forms.Padding(4);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(431, 29);
+            this.progressBar.Size = new System.Drawing.Size(658, 35);
             this.progressBar.TabIndex = 8;
             this.progressBar.TabStop = false;
             this.progressBar.Value = 50;
             // 
             // ISOCDWin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(559, 389);
+            this.ClientSize = new System.Drawing.Size(745, 479);
             this.Controls.Add(this.buildStatusLabel);
             this.Controls.Add(this.targetSystemSettingsLabel);
             this.Controls.Add(this.buildStatusGroupBox);
@@ -243,6 +263,7 @@
             this.Controls.Add(this.progressBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "ISOCDWin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
