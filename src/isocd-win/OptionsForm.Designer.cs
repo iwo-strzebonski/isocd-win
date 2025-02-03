@@ -111,8 +111,8 @@
             this.volumeIdTextBox.Name = "volumeIdTextBox";
             this.volumeIdTextBox.Size = new System.Drawing.Size(345, 22);
             this.volumeIdTextBox.TabIndex = 21;
-            this.volumeIdTextBox.Tag = "Allowed d-characters: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 0 1 2 3" +
-    " 4 5 6 7 8 9 _";
+            this.volumeIdTextBox.Tag = "This field shall specify an identification of the volume. Allowed 32 d-characters" +
+    ": A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 0 1 2 3 4 5 6 7 8 9 _";
             this.volumeIdTextBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.textBox_HelpRequested);
             this.volumeIdTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.D_Characters_check);
             // 
@@ -286,8 +286,9 @@
             this.volumeSetIdTextBox.Name = "volumeSetIdTextBox";
             this.volumeSetIdTextBox.Size = new System.Drawing.Size(345, 22);
             this.volumeSetIdTextBox.TabIndex = 23;
-            this.volumeSetIdTextBox.Tag = "Allowed d-characters: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 0 1 2 3" +
-    " 4 5 6 7 8 9 _";
+            this.volumeSetIdTextBox.Tag = "This field shall specify an identification of the volume set of which the volume " +
+    "is a member. Allowed 128 d-characters: A B C D E F G H I J K L M N O P Q R S T U" +
+    " V W X Y Z 0 1 2 3 4 5 6 7 8 9 _";
             this.volumeSetIdTextBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.textBox_HelpRequested);
             this.volumeSetIdTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.D_Characters_check);
             // 
@@ -310,8 +311,7 @@
             this.publisherIdTextBox.Name = "publisherIdTextBox";
             this.publisherIdTextBox.Size = new System.Drawing.Size(345, 22);
             this.publisherIdTextBox.TabIndex = 25;
-            this.publisherIdTextBox.Tag = "Allowed a-characters: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 0 1 2 3" +
-    " 4 5 6 7 8 9 _ ! \" % & \' ( ) * + , - . / : ; < = > ?";
+            this.publisherIdTextBox.Tag = resources.GetString("publisherIdTextBox.Tag");
             this.publisherIdTextBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.textBox_HelpRequested);
             this.publisherIdTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.A_Characters_check);
             // 
@@ -334,8 +334,7 @@
             this.dataPreparerIdTextBox.Name = "dataPreparerIdTextBox";
             this.dataPreparerIdTextBox.Size = new System.Drawing.Size(345, 22);
             this.dataPreparerIdTextBox.TabIndex = 27;
-            this.dataPreparerIdTextBox.Tag = "Allowed a-characters: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 0 1 2 3" +
-    " 4 5 6 7 8 9 _ ! \" % & \' ( ) * + , - . / : ; < = > ?";
+            this.dataPreparerIdTextBox.Tag = resources.GetString("dataPreparerIdTextBox.Tag");
             this.dataPreparerIdTextBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.textBox_HelpRequested);
             this.dataPreparerIdTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.A_Characters_check);
             // 
@@ -358,8 +357,7 @@
             this.applicationIdTextBox.Name = "applicationIdTextBox";
             this.applicationIdTextBox.Size = new System.Drawing.Size(345, 22);
             this.applicationIdTextBox.TabIndex = 29;
-            this.applicationIdTextBox.Tag = "Allowed a-characters: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 0 1 2 3" +
-    " 4 5 6 7 8 9 _ ! \" % & \' ( ) * + , - . / : ; < = > ?";
+            this.applicationIdTextBox.Tag = resources.GetString("applicationIdTextBox.Tag");
             this.applicationIdTextBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.textBox_HelpRequested);
             this.applicationIdTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.A_Characters_check);
             // 
@@ -439,7 +437,7 @@
             this.isoGroupBox.Controls.Add(this.applicationIdTextBox);
             this.isoGroupBox.Controls.Add(this.dataPreparerIdTextBox);
             this.isoGroupBox.Controls.Add(this.dataPreparerIdLabel);
-            this.isoGroupBox.Location = new System.Drawing.Point(443, 3);
+            this.isoGroupBox.Location = new System.Drawing.Point(443, 4);
             this.isoGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.isoGroupBox.Name = "isoGroupBox";
             this.isoGroupBox.Padding = new System.Windows.Forms.Padding(4);
@@ -531,7 +529,8 @@
             this.dataCacheTextBox.Size = new System.Drawing.Size(140, 22);
             this.dataCacheTextBox.TabIndex = 3;
             this.dataCacheTextBox.Tag = "CDFS allocates a read-ahead cache to improve performance. The size of this cache " +
-    "is specified in CD sectors (2K bytes each). The default size is 8 blocks.";
+    "is specified in CD sectors (2K bytes each). The default size is 8 blocks, min.1 " +
+    "- max.127.";
             this.dataCacheTextBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.textBox_HelpRequested);
             // 
             // fileLockTextBox
@@ -559,7 +558,7 @@
             this.fileHandleTextBox.TabIndex = 12;
             this.fileHandleTextBox.Tag = "As with Filelocks, CDFS pre-allocates a pool of Filehandle structures. The size o" +
     "f the pool is specified as the number of Filehandles to pre-allocate. The defaul" +
-    "t value is 16.";
+    "t value is 16, min.1 - max.9999.";
             this.fileHandleTextBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.textBox_HelpRequested);
             // 
             // retriesTextBox
@@ -572,6 +571,7 @@
             this.retriesTextBox.Name = "retriesTextBox";
             this.retriesTextBox.Size = new System.Drawing.Size(140, 22);
             this.retriesTextBox.TabIndex = 15;
+            this.retriesTextBox.Tag = "The default value is 32, min.0 - max.9999";
             this.retriesTextBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.textBox_HelpRequested);
             // 
             // optionsForm
