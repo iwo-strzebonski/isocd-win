@@ -757,7 +757,7 @@ namespace isocd_builder {
                     maxSectors = isocd_builder_constants.MAX_SECTORS_CDR80;
                     break;
                 default:
-                    maxSectors = isocd_builder_constants.MAX_SECTORS_CDR80;
+                    maxSectors = isocd_builder_constants.MAX_SECTORS_CDR90;
                     break;
 
             }

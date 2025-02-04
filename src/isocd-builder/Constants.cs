@@ -28,10 +28,11 @@ namespace isocd_builder {
         public const string FAST_SEARCH_NAME = "FS";
         public const string SPEED_INDEPENDENT_NAME = "SI";
         public const string TRADEMARK_NAME = "TM";
-
+        //There are 75 sectors per second.
         public const int SECTOR_SIZE = 2048;
         public const int MAX_SECTORS_CDR74 = 333000;
         public const int MAX_SECTORS_CDR80 = 360000;
+        public const int MAX_SECTORS_CDR90 = 405000;
         public const int BIG_ENDIAN_PATH_TABLE_SECTOR = 19;
         public const int DIR_FLAG = 2;
         public const int MINIMUM_PATH_TABLE_RECORD_SIZE = 9;
